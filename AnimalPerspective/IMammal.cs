@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace AnimalPerspective
 {
-    public class Bat : Animal, IMammal
+    public interface IMammal
     {
-        public int NumberOfNipples { get {return 6;} }
+        int NumberOfNipples { get ;}
     }
 }
