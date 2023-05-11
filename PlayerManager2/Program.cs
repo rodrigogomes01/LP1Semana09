@@ -9,7 +9,7 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
     public class Program
     {
         /// <summary>
-        /// The list of all players.
+        /// The list of all players
         /// </summary>
         private List<Player> playerList;
 
@@ -150,10 +150,8 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
             foreach(Player p in playerList)
             {
                 if (p.Score > minScore)
-                    playersWithScoreGreaterThan.Add(p);
+                    yield return p
             }
-
-            return playersWithScoreGreaterThan;
         }
     }
 }
