@@ -127,9 +127,11 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.Write("Enter minimum score: ");
+            int minScore = int.Parse(Console.ReadLine());
+            IEnumerable<Player> playersWithScoreGreaterThan =
+                GetPlayersWithScoreGreaterThan(minScore);
+            ListPlayers(playersWithScoreGreaterThan);
         }
 
         /// <summary>
