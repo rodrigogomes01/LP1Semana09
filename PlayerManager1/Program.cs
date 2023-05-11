@@ -100,9 +100,11 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void InsertPlayer()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.Write("Enter player name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter player score: ");
+            int score = int.Parse(Console.ReadLine());
+            playerList.Add(new Player(name, score));
         }
 
         /// <summary>
