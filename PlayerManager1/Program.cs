@@ -86,9 +86,13 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ShowMenu()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine("Player Manager");
+            Console.WriteLine("==============");
+            Console.WriteLine("1. Insert player");
+            Console.WriteLine("2. List players");
+            Console.WriteLine("3. List players with score greater than...");
+            Console.WriteLine("4. Quit");
+            Console.Write("Enter your option: ");
         }
 
         /// <summary>
@@ -136,9 +140,15 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            ICollection<Player> playersWithScoreGreaterThan = new List<Player>();
+
+            foreach(Player p in playerList)
+            {
+                if (p.Score > minScore)
+                    playersWithScoreGreaterThan.Add(p);
+            }
+
+            return playersWithScoreGreaterThan;
         }
     }
 }
